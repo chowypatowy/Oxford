@@ -30,12 +30,6 @@ test_loader = DataLoader(dataset_test, batch_size=batch_size)
 #     ax.set_yticks(())
 #     ax.imshow(dataset_train[i][0].reshape(28, 28), cmap='Greys_r')
 
-# Define accuracy
-def accuracy(outputs, labels):
-    preds = outputs.argmax(dim = 1)
-    correct = (preds == labels).sum().item()
-    return correct / labels.size() # convert to len(labels)
-
 # Define network
 class Net(nn.Module):
     def __init__(self):
@@ -112,8 +106,32 @@ for epoch in range(4):  # 2 epochs, 50000 / 64 = roughly 800 iterations per epoc
 
         # print statistics
         running_loss += loss.item()
-        if i % 200 == 199:    # print every 2000 mini-batches
+        if i % 100 == 99:    # print every 100 iterations, validate every 100 iterations
             print(f'[{epoch + 1}, {i + 1:5d}] loss: {running_loss / 2000:.3f}')
+            running_loss = 0.0
+
+
+            # Compute training accuracy for this batch
+            _, preds = outputs.max(1)
+            train_acc = (preds == labels).sum().item() / labels.size(0)
+            
+            # Validation accuracy
+            net.eval()  # switch to eval mode
+            val_correct = 0
+            val_total = 0
+            with torch.no_grad():
+                for v_images, v_labels in valid_loader:
+                    v_outputs = net(v_images)
+                    v_preds = v_outputs.argmax(dim=1)
+                    val_correct += (v_preds == v_labels).sum().item()
+                    val_total += v_labels.size(0)
+            val_acc = val_correct / val_total
+            net.train()  # switch back to train mode
+
+            print(f'Epoch {epoch+1}, Iter {i+1}, '
+                  f'Loss: {running_loss/200:.3f}, '
+                  f'Train Acc: {train_acc*100:.2f}%, '
+                  f'Val Acc: {val_acc*100:.2f}%')
             running_loss = 0.0
 
 print('Finished Training')
