@@ -1,0 +1,46 @@
+\setcounter{chapter}{2}
+\chapter{Cauchy's Formula and its Applications}
+\setcounter{section}{4}
+\section{Isolated Singularities}
+
+\begin{definition}
+    Let $z_0$ be an isolated singularity of $f$. Then the \textit{residue} of $f$ at $z_0$ is defined as the coefficient $c_{-1}$ of the Laurent expansion and denoted by $Res_{z_0}f$ or $Res(f, z_0)$. 
+    
+\end{definition}
+
+\begin{theorem}
+    Let $z_0$ be an isolated singularity of $f$. Let $\sum _{-\infty}^{\infty} c_n(z-z_0)^n$ be its Laurent expansion. Then $z_0$ is
+    \begin{itemize}
+        \item A removable singularity if $c_n = 0$ for all $n < 0$. Equivalently, the principal part vanishes.
+        \item A pole of order $n$ if $c_{-n} \neq  0$ and $c_k = 0$ for all $k < -n$. Equivalently, the principal part is non-trivial but contains only a finite number of non-zero terms.
+        \item An essential singularity if there are arbitrarily large $n$ such that $c_{-n} \neq  0$. Equivalently, the principal part contains finitely main non-zero terms.
+    \end{itemize}
+\end{theorem}
+
+
+\begin{theorem}(Riemann's removable singularity theorem)
+    Suppose that $ U$ is an open subset of $\C$ and $z_0 \in  U$ and suppose that $f: U \setminus  \{ z_0\} \to \C$ is holomorphic. Then $z_0$ is a removable singularity if and only if $f$ is bounded near $z_0$. 
+\end{theorem}
+\begin{lemma}
+    Let $f$ be a holomorphic function in a neighborhood of $z_0$. Then $z_0$ is a pole if and only if $|f(z)| \to \infty$ as $z \to z_0$. Moreover, in this case, the function
+    \[
+    h(z) = \begin{cases}
+        \frac{1}{f(z)}, & z \neq z_0;\\
+        0, & z=z_0;
+    \end{cases}
+    .\] 
+    is holomorphic in a neighborhood of $z_0$ and the multiplicty of its zero at $z_0$ is equal to the order of the pole of $f$.  
+\end{lemma}
+
+\begin{theorem}(Casorati-Weierstrass)
+    Let $U$ be an open subset of $\C$ and let $a \in  U$. Suppose that $f : U \setminus \{a\} \to \C$ is a holomorphic function with an isolated essential singularity at $a$. Then for all $\rho > 0$ with $B(a, \rho ) \subseteq U$, the set $f(B(a,a \rho ) \setminus \{a\}$ is dense in $\C$, that is, the closure of $f(B(a, \rho )\setminus \{a\} )$ is all of $\C$.  
+
+\end{theorem}
+
+\begin{theorem}(Residue Theorem)
+    Suppose that $U$ is an open set in $\C$ and $\gamma $ is a closed curve that is contained in $U$ together with its inside. Suppose that $f$ is holomorphic on $U \setminus  S$ where $S$ is a finite set of isolated singularities of $f$. We also assume that $f$ has no singularities on $\gamma \star$, that is $S \cap \gamma \star = \O$. Then
+    \[
+        \frac{1}{2\pi i} \int_{\gamma } f(z)dz = \sum_{a \in  S} I(\gamma , a)Res_a(f)
+    .\] 
+    $
+\end{theorem}

@@ -1,0 +1,6 @@
+\contentsline {chapter}{\numberline {0}Introduction}{2}{}%
+\contentsline {section}{\numberline {0.3}Basic notations}{2}{}%
+\contentsline {chapter}{\numberline {1}Complex Differentiability}{3}{}%
+\contentsline {section}{\numberline {1.1}Complex Differentiability}{3}{}%
+\contentsline {chapter}{\numberline {3}Cauchy's Formula and its Applications}{4}{}%
+\contentsline {section}{\numberline {3.5}Isolated Singularities}{4}{}%
