@@ -3,4 +3,8 @@
 \contentsline {chapter}{\numberline {1}Complex Differentiability}{3}{}%
 \contentsline {section}{\numberline {1.1}Complex Differentiability}{3}{}%
 \contentsline {chapter}{\numberline {3}Cauchy's Formula and its Applications}{4}{}%
-\contentsline {section}{\numberline {3.5}Isolated Singularities}{4}{}%
+\contentsline {section}{\numberline {3.1}Cauchy's Integral Formula}{4}{}%
+\contentsline {section}{\numberline {3.2}Homotopy Version of Cauchy's Theorem}{5}{}%
+\contentsline {section}{\numberline {3.3}Applications of the Integral Formula}{5}{}%
+\contentsline {section}{\numberline {3.4}The Identity Theorem}{6}{}%
+\contentsline {section}{\numberline {3.5}Isolated Singularities}{6}{}%

@@ -1,7 +1,140 @@
 \setcounter{chapter}{2}
 \chapter{Cauchy's Formula and its Applications}
-\setcounter{section}{4}
+\section{Cauchy's Integral Formula}
+\begin{theorem}[Cauchy's Integral Formula]
+    Suppose that $f : U \to \C$ is a holomorphic function on an open set $U$, $w \in  U$ and $\gamma $ is a simple positively oriented closed curve such that $\gamma ^*$ and the interior of $\gamma $ are inside of $U$. Then for all $w$ that are inside of $\gamma $ w have
+    \[
+    f(w) = \frac{1}{2\pi i} \int_{\gamma }^{} \frac{f(z)}{z-w}dz. 
+    \] 
+\end{theorem}
+\begin{remark}
+    Same result holds for any oriented curve $\gamma $ once we weigh the LHS by the winding number of a path around the point $w \not\in \gamma^*$, provided that $f$ is holomorphic on the inside of $\gamma $.
+\end{remark}
+\begin{corollary}[Cauchy Formula for multiple curves]
+    Let $U$ be a bounded domain with piecewise $C^{1}$ boundary which has finitely many components and $f$ be a function holomorphic in the closure of $U$ (this means that it is holomorphic in some open domain that contains the closure of $U$). We parametrize each boundary component of $U$ by a contour $\gamma _i$ in such way that $i \gamma _i'(t)$ is an inward normal. This means that the 'outer' boundary is positively oriented (i.e. counter-clockwise) and all 'inner' components are negatively oriented (i.e. clockwise). Denoting $\int_{\delta U}^{}  = \sum \int_{\gamma _i}^{}  $ we have
+\[
+    \int_{\delta U} f(z)dz = 0
+\] and
+\[
+    \frac{1}{2\pi i}\int_{\delta U} \frac{f(z)}{z-w}dz = f(w), w \in  U.
+\] 
+    
+\end{corollary}
+
+\section{Homotopy Version of Cauchy's Theorem}
+\textbf{NON-EXAMINABLE}
+\section{Applications of the Integral Formula}
+
+\begin{corollary}
+    If $f : U \to \C$ is holomorphic on an open set $U$, then for any $z_0 \in  U, f(z)$ is equal to its Taylor series at $z_0$ and the Taylor series converges on any open disk centered at $z_0$ lying in $U$. Moreover the derivatives of $f$ at $z_0$ are given by
+    \[
+        f^{(n)}(z_0) = \frac{n!}{2\pi i}\int_{\gamma (z_0, r)} \frac{f(z)}{(z-z_0)^{n+1}} dz
+    \] 
+\end{corollary}
+\begin{definition}    
+    A function which is locally given by a power series is said to be \textit{analytic}. We have thus shown that any holomorphic function is actually analytic, and from now on we may use the terms interchangeably.
+\end{definition}
+\begin{definition}
+    A function $f: \C \to \C$ is \textit{entire} if it is complex differentiable on the whole complex plane.  
+\end{definition}
+\begin{theorem}[Liouville]
+    Let $f : \C \to  \C$ be an entire function. If $f$ is bounded then it is constant.
+\end{theorem}
+\begin{remark}
+    Liouville's theorem is another manifestation of the unique properties of holomorphic functions. In real analysis, $f(x) = \frac{1}{1+x^2}$ is real-analytic in the entire $\R$, but it is bounded. \textbf{ This is also one of the first examples of a dichotomy which often appears in complex analysis. } In many cases objects are as good or as bad as they could be but nothing in between.  
+\end{remark}
+\begin{theorem}
+    Suppose that $p(z) = \sum_{k=0}^{n} a_kz^k$ is a non-constant polynomial where $a_k \in  \C$ and $a_n \neq  0$. Then there is a $z_0 \in  \C$ for which $p(z_0) = 0$. 
+\end{theorem}
+\begin{remark}
+    The crucial point of the above proof is that on term of the polynomial dominates the behavior for large $z$. All proofs of the fundamental theorem hinge on essentially this point.
+\end{remark}
+\begin{theorem}
+    Suppose $f : U \to  \C$ is a continuous function on an open subset $U \subseteq \C$. If for any closed path $\gamma :[a, b] \to o U$ we have $\int_{\gamma }f(z)dz = 0$, then $f$ is holomorphic.
+\end{theorem}
+
+\section{The Identity Theorem}
 \section{Isolated Singularities}
+\begin{definition}
+    Let $f : U \to \C$ be a function, where $U$ is open. We say that $z_0 \in \overline{U}$ is a \textit{regular} point of $f$ if $f$ is holomorphic at $z_0$. Otherwise we say that $z_0$ is \textit{singular}.\\
+    We say that $z_0$ is an \textit{isolated singularity} if $f$ is holomorphic on $B(z_0, r) \setminus \{z_0\} $ for some  $r>0$.  
+\end{definition}
+\begin{definition}
+    A function on an open set $U$ which has only isolated singularities all of which are poles is called a \textit{meromorphic} function on $U$. (Strictly, it is a function only defined on the complement of the poles in $U$.)  
+\end{definition}
+\begin{definition}
+    Let $z_0$ be an isolated singularity of function $f$. We say that $z_0$ is
+    \begin{itemize}
+        \item A \textit{removable singularity} if there is a function $g$ holomorphic in $B(z_0, r)$ for some $r > 0$ such that such that $f(z) = g(z)$ in $B(z_0,r)\setminus \{z_0\} $.    
+        \item A \textit{pole of order n} if there is a function $g$ holomorphic in $B(z_0, r)$ for some $r > 0$ such that $g(z_0) \neq  0$ and $f(z) = (z-z_0)^{-n}g(z)$ in $B(z_0, r)\setminus \{z_0\} $.  
+    \end{itemize}
+\end{definition}
+
+\begin{eg}
+    Let  $f(z) = \frac{\sin z}{z}$. $z_0=0$ is a removable singularity. 
+\end{eg}
+
+\begin{explanation}
+    The function
+    \[
+    g(z) = 1 - \frac{z^2}{3!} + \frac{z^{4}}{5!}-\ldots
+    \] is entire and coincides with $f$ outside of $z_0$. 
+\end{explanation}
+
+\begin{eg}
+    Let $f(z) = \frac{\sin z}{z^{n+1}}$. This function has a pole of order $n$ at $z_0$. 
+\end{eg}
+
+\begin{explanation}
+    It is easy to see for $z \neq  0$ we have $f(z) = \frac{g(z)}{z^{n}}$ where $g$ is the entire function from the previous example. Obviously $g(0) = 1 \neq  0$. 
+\end{explanation}
+
+\begin{eg}
+    Let $f(z) = \sin(\frac{1}{z})$. This function is holomorphic in $C\setminus \{0\} $. It can be shown 0 is neither a removable singularity nor a pole, so it must be an essential singularity.
+\end{eg}
+
+
+\begin{theorem}(Laurent's Theorem)
+    Suppose that $0 < r < R$ and
+    \[
+    A = A(z_0, r, R) = \{z : r < |z - z_0| < R\}
+    \] 
+    is an annulus centered at $z_0$. If $f : U \to \C$ is holomorphic on an open set $U$ which contains $\overline{A}$, then there exist $c_n \in  \C$ such that
+    \[
+    \sum_{n=-\infty}^{\infty} c_n (z-z_0)^n 
+    \] 
+    Th series converges for all $z \in A$ and it converges uniformly for all $z \in  A(z_0, r', R')$ where $r < r' < R' < R$. The series is called the \textit{Laurent series} of $f$. 
+    Moreover, the $c_n$ are unique and are given by the following formulae:
+    \[
+        c_n = \frac{1}{2\pi i} \int_{\gamma _s} \frac{f(z)}{(z-z_0)^{n+1}}dz,
+    \] 
+    where $s \in [r, R]$ and for any $s > 0$ we set $\gamma _s(t) = z_0 + se^{2\pi it}$.
+\end{theorem}
+\begin{remark}
+    Given a formula for $c_n$ in terms of  $f$, the Laurent expansion is unique. If two series converge to the same function then they coincide term-by-term.
+
+\end{remark}
+\begin{remark}
+    If $f$ is holomorphic in $B(z_0, R)$, then for $n < 0$ the integrand in the formula for $c_n$ is holomorphic, hence $c_n = 0$ for all $n < 0$. For $n \ge 0$ formulas for $c_n$ are exactly the same as in Taylor's theorem so in this case the Laurent series is the same as the Taylor series.
+    
+\end{remark}
+
+\begin{corollary}
+    If $f : U \to \C$ is a holomorphic function and $z_0$ is an isolated singularity, then $f$ has a Laurent expansion on punctured disc $B(z_0, R)\setminus \{z_0\} $ for any $R$ such that $B(z_0, R)\setminus \{z_0\} \subset U$.  
+\end{corollary}
+
+\begin{definition}
+    Let $z_0$ be an isolated singularity of $f$ and $\sum_{}^{} c_n (z-z_0)^n $ be its Laurent expansion. 
+ Its \textit{principal part} of $f$ at $z_0$ is the sum of terms with negative powers and denoated $P_{z_0}f$. Namely,
+\[
+    P_{z_0}f = \sum_{n=-\infty}^{\infty} c_n (z-z_0)^n = \sum_{n=1}^{\infty} c_{ -n } (z-z_0)^n 
+\] 
+\end{definition}
+\begin{proposition}
+    Th principal part of $f$ at $z_0$ converges on $\C\setminus \{z_0\} $ and converges uniformly on $\C\setminus B(z_0, r)$. 
+\end{proposition}
+    
+
 
 \begin{definition}
     Let $z_0$ be an isolated singularity of $f$. Then the \textit{residue} of $f$ at $z_0$ is defined as the coefficient $c_{-1}$ of the Laurent expansion and denoted by $Res_{z_0}f$ or $Res(f, z_0)$. 
@@ -29,7 +162,7 @@
         0, & z=z_0;
     \end{cases}
     .\] 
-    is holomorphic in a neighborhood of $z_0$ and the multiplicty of its zero at $z_0$ is equal to the order of the pole of $f$.  
+    is holomorphic in a neighborhood of $z_0$ and the multiplicity of its zero at $z_0$ is equal to the order of the pole of $f$.  
 \end{lemma}
 
 \begin{theorem}(Casorati-Weierstrass)
