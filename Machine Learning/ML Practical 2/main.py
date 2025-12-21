@@ -9,7 +9,7 @@ class NBC:
     # Gaussisan univariate distribution
     def real_likelihood(self, x, mean, variance):
         return 1 / math.sqrt( 2 * math.pi * variance) * math.exp(-1/2 * (x - mean)**2/variance)
-    
+   
     # Bernoulli distribution
     def binary_likelihood(self, x, p):
         if(x == 1): 

@@ -1,6 +1,79 @@
 \chapter{Introduction to Machine Learning}
-\section{Complex Differentiability}
-\lesson{1}{di 15 okt 2019 10:30}{What is Machine Learning}
+\section{What is machine learning?}
+"The goal of machine learning is to develop methods that can automatically detect patterns in data, and then to use the uncovered patterns to predict future data or other outcomes of interest."
+
+\begin{definition}[ Mitchell, 1997 ]
+    A computer program is said to \textbf{learn} from experience $E$ with respect to some class of tasks $T$ and performance measure $P$, if its performance at tasks in $T$, as measured by $P$, improves with experience $E$.
+\end{definition}
+\begin{eg}
+    In the case of face detection, $E$ is input data containing faces marked clearly by bounding boxes, $T$ is identifying faces by putting boxes around them in new images, and $P$ could be the fraction of faces correctly identified.
+    
+    Thus by Mitchell's definition, a computer program \textit{learns} "face detection" if its performance improves when provided with more experience, i.e. more images with faces marked by bounding boxes.
+\end{eg}
+
+\section{A brief history of machine learning}
+Machine learning as a modern discipline grew out of several disciplines, notably statistics, computer science, and neuroscience.
+\subsection{Fisher and the Iris Dataset}
+Arguably one of the first instances of an automatic classification was due to statistician/biologist Ronald A. Fisher in 1936. Given data about three kinds of iris flowers, he proposed to look at a linear function of the four measurements that best discriminates the types (Fisher Linear Discrminant Analysis). 1936 is also at least a decade before the first computers were built.
+
+\subsection{Rosenblatt and the Perceptron}
+Frank Rosenblatt constructed the Perceptron, inspired by biological principals. In ML terms, a perceptron is viewed as taking multiple inputs, and if the weighted sum of these exceeds a threshold, the output is 1, otherwise 0. Rosenblatt also designed an algorithm that would adjust the weights if on a new input the prediction was incorrect. Under certain assumptions, it can be shown this algorithm converges to the correct classifier.
+
+\begin{note}
+    We will return to perceptrons in the form of more general artificial neurons, where the output will be a continuous function of the weighted sum of the inputs. A "deep neural network" is simply many artificial neurons stacked together in layers.
+\end{note}
+\section{Machine Learning Paradigms through Applications}
+\subsection{Supervised Learning}
+The training data consists of input and output pairs. The goal of the learning algorithm is to learn a map from input to output.
+\begin{eg}
+    Boston Housing Dataset. The data consists of several attributes, some numerical (area) and some categorical (whether the house is on the river). The goal is to predict the house price. 
+
+    When the output of the algorithm is a real value, it is called \textit{regression}. 
+\end{eg}
+\begin{eg}
+    Imagenet Object Detection. Data consists of images with bounding boxes around objects and labels for the objects. The task it to put bounding boxes around objects in certain categories and label them. 
+
+    When the output of the algorithm is a category, this is called \textit{classification}. In this case there are multiple categories and is referred to as \textit{multi-class} classification. When there are two categories it is \textit{binary} classification. In the case of detecting objects in an image, there may be several objects appearing in the same image. This is referred to as \textit{multi-label multi-class} classification.
+\end{eg}
+
+\subsection{Unsupervised Learning}
+The training data lacks outputs. The goal is usually to find some interesting structure in the dataset.
+
+\begin{eg}
+    Clustering Genetic Data. Novembre et al. (2008) looked at genetic data of $3000$ European individuals. They find this data can be clustered remarkably well in groups corresponding to geography. The learning algorithm was only given genetic data (not nationality) and asked to detect clusters. \textit{Clustering} is a canonical example of unsupervised learning. Another on is \textit{dimensionality reduction}, both useful for learning and for visualization.
+\end{eg}
+
+\subsection{Other Paradigms}
+These don't neatly fit into (un)supervised learning, but are important nevertheless.
+\subsubsection{Active Learning}
+Task is to predict outputs corresponding to individual instances (as in supervised learning). However, initially, all data is unlabelled. The goal is to design algorithms that try to identify the most useful data which can then be labelled by humans as needed.
+\subsubsection{Semi-Supervised Learning}
+Goal is to design learning algorithms that make use of large quantities of unlabelled data that may often be available in conjunction with some labelled data. 
+\subsubsection{Collaborative Filtering}
+Best explained by recommender systems. A matrix with entries containing movie ratings by users is quite sparse. The goal is to complete this matrix accurately so that useful predictions can be made to users.
+
+\subsubsection{Reinforcement Learning}
+Differs from other paradigms in the sense that there is no need for explicit inputs/outputs. A key aspect of RL-applicable settings is the sequential nature of actions that must be taken. For example when designing systems for self-driving cars or automatically flying helicopters, whether an action was a mistake may only be known several steps after the action was taken. It is hard to generate examples of correct/incorrect behaviour, but it is often possible to define a reward function. It was an integral component of the system that beat the world Go champion.
+
+\section{Some Practical Concerns}
+Before applying ML techniques, it is important that the data has a useful representation (e.g. filtering specific words from spam email rather than the raw electronic format). We will work with the assumption that the data has already been cleaned up and put in a suitable format. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

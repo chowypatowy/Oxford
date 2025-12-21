@@ -1,2 +1,14 @@
 \contentsline {chapter}{\numberline {1}Introduction to Machine Learning}{2}{}%
-\contentsline {section}{\numberline {1.1}Complex Differentiability}{2}{}%
+\contentsline {section}{\numberline {1.1}What is machine learning?}{2}{}%
+\contentsline {section}{\numberline {1.2}A brief history of machine learning}{2}{}%
+\contentsline {subsection}{\numberline {1.2.1}Fisher and the Iris Dataset}{2}{}%
+\contentsline {subsection}{\numberline {1.2.2}Rosenblatt and the Perceptron}{3}{}%
+\contentsline {section}{\numberline {1.3}Machine Learning Paradigms through Applications}{3}{}%
+\contentsline {subsection}{\numberline {1.3.1}Supervised Learning}{3}{}%
+\contentsline {subsection}{\numberline {1.3.2}Unsupervised Learning}{3}{}%
+\contentsline {subsection}{\numberline {1.3.3}Other Paradigms}{4}{}%
+\contentsline {subsubsection}{Active Learning}{4}{}%
+\contentsline {subsubsection}{Semi-Supervised Learning}{4}{}%
+\contentsline {subsubsection}{Collaborative Filtering}{4}{}%
+\contentsline {subsubsection}{Reinforcement Learning}{4}{}%
+\contentsline {section}{\numberline {1.4}Some Practical Concerns}{4}{}%
