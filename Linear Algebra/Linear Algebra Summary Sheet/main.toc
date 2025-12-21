@@ -1,0 +1,3 @@
+\contentsline {chapter}{\numberline {1}Vector Spaces and Linear Maps}{2}{}%
+\contentsline {section}{\numberline {1.1}Vector Spaces}{2}{}%
+\contentsline {section}{\numberline {1.2}Linear Maps}{3}{}%

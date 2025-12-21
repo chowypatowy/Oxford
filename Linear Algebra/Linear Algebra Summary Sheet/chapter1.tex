@@ -1,0 +1,52 @@
+\chapter{Vector Spaces and Linear Maps}
+\section{Vector Spaces}
+\begin{definition}
+    A set $\F$ with two binary operations  $+$ and $\times$ is a \textbf{field} if both $(\F, +, 0)$ and $(\F \setminus \{0\} , \times , 1)  $ are abelian groups and the distribution law holds:
+    \[
+    
+        (a+b)c = ac + bc, for all a, b, c, \in  \F
+    \] 
+\end{definition}
+\begin{definition}
+    The smallest integer $p$ such that
+    \[
+    1 + 1 + \cdots + 1 \quad (\text{$p$ times}) = 0
+    \] 
+    is called the \textbf{characteristic} of $\F$. If no such $p$ exists, the charecteristic of $\F$ is defined to be 0. If such a $p$ exists, it is necessarily prime.
+\end{definition}
+\begin{definition}
+    A \textbf{vector space} $V$ over a field $\F$ is an abelian group $(V, +, 0)$ together with a scalar multiplication $\times $ $\F \times  V \to  V$ such that for all $a, b \in  F, v, w, \in  V$:
+    \begin{enumerate}
+        \item $a(v+w) = av + aw$        
+        \item $(a+b)v = av + bv$        
+        \item $(ab)v = a(bv)$
+        \item $1 \cdot v = v$
+    \end{enumerate}
+\end{definition}
+\begin{definition}
+    Let $V$ be a vector space over $\F$.
+    \begin{enumerate}
+        \item A set $S \subseteq V $ is \textbf{linearly independent} if whenever $a_1, \cdots, a_n \in \F$, and $s_1, \cdots, s_n \in  S$,
+            \[
+            a_1s_1+\cdots+a_ns_n=0 \implies a_1=\cdots=a_n=0.
+            \] 
+        \item A set $S \subseteq V$ is \textbf{spanning} if for all $v \in  V$ there exists $a_1, \cdots, a_n \in  \F$ and $s_1, \ldots, s_n \in  S$ with $v = a_1s_1 + \cdot a_ns_n$.
+        \item A set $\mathcal{B} \subseteq V$ is a \textbf{basis} of $V$ if $\mathcal{B}$ is spanning and linearly independent. The size of $\mathcal{B}$ is the \textbf{dimension} of $V$.
+    \end{enumerate}
+\end{definition}
+\begin{eg}
+    Let $V = \R^{\N} = \{(a_1, a_2, a_3, \cdots)\ | a_i \in  \R\} $. Then $S = \{e_1, e_2, \cdots\} $ where $e_1 = (1, 0, 0, \cdots), \cdots$ is linearly independent but its span $W$ is a proper subset of $V$. 
+\end{eg}
+\begin{explanation}
+    It is important that $n$ is finite.
+\end{explanation}
+
+\section{Linear Maps}
+We consider linear maps and their relation to matrices.
+\begin{definition}
+    Suppose $V$ and $W$ are vector spaces over $\F$. A map $T : V \to  W$ is a \textbf{linear map} if for all $a \in  \F, v, v' \in  V$, 
+    \[
+    T(av + v') = aT(v) + T(v').
+    \] 
+    A bijective linear map is called an \textbf{isomorphism} of vector spaces.
+\end{definition}
