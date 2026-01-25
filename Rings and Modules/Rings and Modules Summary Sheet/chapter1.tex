@@ -1,0 +1,33 @@
+\setcounter{chapter}{0}
+\chapter{Rings: Definition and Examples}
+\begin{definition}
+    A ring is a datum $(R, +, \times, 0, 1)$ where $R$ is a set, $1, 0, \in  \R$ and $+, \times$ are binary operations on $R$ such that
+    \begin{itemize}
+        \item $R$ is an abelian group under $+$ with identity element 0
+        \item The binary operation $\times$ is associative and $1 \times x = x \times 1 = x$ for all $x \in  \R$.
+        \item Multiplication distributes over addition:
+            \[
+            \begin{align*}
+                x \times (y + z) &= (x \times y) + (x \times z),\\
+                (x + y) \times z &= (x \times z) + (y \times z), \forall x, y, z \in  \R
+            .\end{align*}
+            \] 
+    \end{itemize}
+\end{definition}
+\begin{eg}
+    Common rings:
+    \begin{itemize}
+        \item The integers $\Z$ are the fundamental example of a ring. Much of the course will be about finding an interesting class of rings which behave a lot like $\Z$. 
+        \item $\Z[i] = \{a + ib \in  \C : a, b \in  \Z\} $ is a ring. It is known as the \textit{Gaussian integers}. 
+        \item Any field is a ring. The only difference between the axioms for a field and for a ring is that a ring does not require multiplicative inverses, and that for fields one assumes $1 \neq 0$. Also fields must have commutative multiplication, but we assume it for rings in this course.
+    \end{itemize}
+\end{eg}
+\begin{lemma}(Subring criterion)
+    Let $R$ be a ring and $S$ a subset of $R$, then $S$ is a subring if and only if $1 \in  S$ and for all $s_1, s_2 \in  S$ we have $s_1s_2, s_1-s_2 \in  S$.
+\end{lemma}
+ 
+
+
+
+
+

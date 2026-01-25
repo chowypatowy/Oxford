@@ -1,0 +1,29 @@
+\setcounter{chapter}{0}
+\chapter{Topological Spaces}
+Non-standard examples of topological spaces to check intuition
+\begin{itemize}
+    \item (Discrete metric) : $ \Tau \mathcal{T} = \mathcal{P}(X)$
+    \item (Indiscrete metric) : $\mathcal{T} = \{\phi, X\} $
+    \item $X = \{1, 2, 3\} , \mathcal{T}=\{\phi, \{1\} , \{1, 2\}, \{1, 2, 3\}  \} $
+    \item (Co-finite topology) Let $X$ be an infinite set. 
+        \[
+    \mathcal{T} = \{\phi\} \cup \{U \subseteq X : X \setminus U \text{ is finite }  \} 
+        \] 
+\end{itemize}
+The indiscrete topology is always the coursest topology, and the discrete topology is always the finest, i.e. 
+\[
+    \{\phi, X\} \subseteq \mathcal{T} \subseteq \mathcal{P}(X)
+\] 
+\begin{remark}
+    We will see many implications of the following form:
+    \[
+    \text{TOPOLOGICAL PROPERTY} \implies \text{PROPERTY IN TERMS OF SEQUENCES}
+    \] 
+    In metric spaces, the converse may sometimes be true. In a general topological setting the converse implication is never true.
+\end{remark}
+
+\textbf{CLOSURES}
+We don't think about closures the way we define them. Instead we think about them in terms of the following property:
+\begin{prop}
+    $$\overline{A} = \{x \in  X : \text{ for every open } U \subseteq X \text{ with }x \in  U, U \cap A \neq  \O \} $$
+\end{prop}

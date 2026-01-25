@@ -1,0 +1,17 @@
+\chapter{Basic Properties}
+\section{Integral Domains}
+\begin{definition}
+    Let $R$ be a ring. The subset
+    \[
+    R^{\times} = \{r \in  R : \exists s \in  R, rs = 1\} 
+    \] 
+    is called the group of \textit{units} in $R$, i.e. $(R, \times, 1_R)$ is a group. 
+    Intuitively these are the invertible elements.
+\end{definition}
+\begin{prop}
+    Let $K$ be a field and let $\theta: R \to K$ be an embedding (injective homomorphism). Then there is a unique injective homomorphism $\tilde \theta :  F(R) \to  K$ extending $\theta$, in the sense that $\tilde \theta_{|R} = \theta$ where we view $R$ as a subring of $F(R)$ via the above embedding.
+    
+\end{prop}
+\begin{remark}
+    If $u \in  I$ where $u \in  R^\times$, then  $uu^{-1} \in  I$, then $1_R \in  I$, then $I = R$. 
+\end{remark}
