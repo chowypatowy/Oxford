@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1769090514.38122 "main.tex" "main.pdf" "main" 1769090516.07243 2
+["pdflatex"] 1770474636.45294 "main.tex" "main.pdf" "main" 1770474638.42675 2
   "/etc/texmf/web2c/texmf.cnf" 1751897883.71965 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1000.tfm" 1136768653 3584 2d666ecf6d466d8b007246bc2f94d9da ""
@@ -303,10 +303,11 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1751897897.30466 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1751897979 8216058 a2fe3cb4220b60df0074b213dadd0127 ""
   "chapter1.tex" 1769090430.61579 1630 8930df57720abaf9d1ae444bb68c41bc ""
-  "chapter2.tex" 1769090512.94264 795 2295841198390b461a6872c26407578e ""
-  "main.aux" 1769090515.88763 1740 275062d49f8502d7d043e2fb4fe64fbd "pdflatex"
-  "main.tex" 1769090139.31202 825 4975ae9ca3eb538926bc2dd4c60b5773 ""
-  "main.toc" 1769090515.88863 205 d663e745da13c4adcfda5f4bf33d3b57 "pdflatex"
+  "chapter2.tex" 1770390608.60158 795 2295841198390b461a6872c26407578e ""
+  "chapter3.tex" 1770474636.1609 676 7e15080d39ae640587e5ed785ba2a3ef ""
+  "main.aux" 1770474638.21591 2689 0f5825f1bff14913549d243da28bdc31 "pdflatex"
+  "main.tex" 1770390690.25583 850 d60633e6503eb0c84fd679673882728f ""
+  "main.toc" 1770474638.21691 272 7da41bdfe65821ee479c65d3ca0f6ac6 "pdflatex"
   "preamble.tex" 1768945202.83416 7761 fe1ba713304b5a2832ec6f2a6c84ff80 ""
   (generated)
   "main.aux"

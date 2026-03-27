@@ -2,7 +2,7 @@
 \chapter{Topological Spaces}
 Non-standard examples of topological spaces to check intuition
 \begin{itemize}
-    \item (Discrete metric) : $ \Tau \mathcal{T} = \mathcal{P}(X)$
+    \item (Discrete metric) : $  \mathcal{T}= \mathcal{P}(X)$
     \item (Indiscrete metric) : $\mathcal{T} = \{\phi, X\} $
     \item $X = \{1, 2, 3\} , \mathcal{T}=\{\phi, \{1\} , \{1, 2\}, \{1, 2, 3\}  \} $
     \item (Co-finite topology) Let $X$ be an infinite set. 
@@ -26,4 +26,8 @@ The indiscrete topology is always the coursest topology, and the discrete topolo
 We don't think about closures the way we define them. Instead we think about them in terms of the following property:
 \begin{prop}
     $$\overline{A} = \{x \in  X : \text{ for every open } U \subseteq X \text{ with }x \in  U, U \cap A \neq  \O \} $$
+    i.e. the set of points such that any open neighborhood of the point intersects $A$. 
 \end{prop}
+
+From sheet 1 exercise 9:
+An open set $U \in T$ has non-empty intersection with $A$ if and only if $U$ has non-empty intersection with $\overline{A}$
